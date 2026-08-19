@@ -1,22 +1,12 @@
 import React from 'react'
-import { useProduct } from '../context/Productcontext'
-import ProductCard from '../components/Products/ProductCard';
-import nevbar from '../components/layout/Nevbar';
+import Herosessction from '../components/home/Herosessction'
+import Feature from '../components/home/Feature'
+
 function HomePage() {
-  const { product } = useProduct();
-
   return (
-    
-
-    <div className='m-0 p-0 relative'>
-      <nevbar/>
-        <div className='m-auto w-7xl'>
-              <div className='grid md:gride-col-3 lg:grid-cols-4 sm:grid-col-2 gap-4'>
-                  {product?.map((item) => (
-                    <ProductCard key={item.id} product={item}/>
-                  ))}
-              </div>
-        </div>
+    <div className="space-y-4">
+      <Herosessction />
+      <Feature />
     </div>
   )
 }
